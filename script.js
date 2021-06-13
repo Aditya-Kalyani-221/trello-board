@@ -2,7 +2,11 @@ let lists = [];
 let cards= [];
 let addToList;
 let moveItem;
-let id = 1;
+let id = parseInt(getLocalStorageData('id'));
+if(!id) {
+	id = 1;
+	setLocalStorage('id', id);
+}
 const modal = document.querySelector('.modal-list');
 const modalCard = document.querySelector('.modal-card');
 const overlay = document.querySelector('.overlay');
@@ -54,7 +58,9 @@ const insertCard = function() {
 		}
 		addCardToList(addToList, payload);
 		let ele = document.getElementById(addToList);
-		showCard(title, desc, ele);
+		showCard(title, desc, ele, id);
+		id++;
+		setLocalStorage('id', id);
 	}
 }
 
@@ -142,15 +148,16 @@ function displayCards(listName, listEle) {
 		for(let i=0; i < listCards.value.length; i++) {
 			let title = listCards.value[i].title;
 			let desc = listCards.value[i].description;
-			showCard(title, desc, listEle);
+			let idCard = listCards.value[i].id;
+			showCard(title, desc, listEle, idCard);
 		}
 	}
 }
 
-function showCard(title, desc, listEle) {
+function showCard(title, desc, listEle, idCard) {
 	let ele = document.createElement('div');
 	ele.setAttribute('class', 'card');
-	ele.setAttribute('id', id++);
+	ele.setAttribute('id', idCard);
 	ele.setAttribute('draggable', true);
 	ele.addEventListener('dragstart', dragBegin);
 	let cardTitle = document.createElement('div');
