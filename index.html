@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Trello Board</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- Add List button -->
+    <div class="add-btn">
+      <button class="show-modal-list">+Add</button>
+    </div>
+
+    <!-- Displaying the list -->
+    <div class="list">
+      
+    </div>
+
+    <!-- Modal for list and cards -->
+    <div class="modal-list hidden">
+      <button class="close-modal-list">&times;</button>
+      <h3>Enter name of new list</h3>
+      <label for="lname"></label>
+      <input type="text" name="lname" id="lname">
+      <div class="save-btn">
+        <button class="btn" id="createList">Save</button>
+      </div>
+    </div>
+    <div class="modal-card hidden">
+      <button class="close-modal-card">&times;</button>
+      <h3>Enter title of new card</h3>
+      <label for="title"></label>
+      <input type="text" name="title" id="title" required>
+      <h3>Enter description</h3>
+      <label for="description"></label>
+      <input type="textarea" name="description" id="description" required>
+      <div class="error-msg hidden">Please fill in the title and description</div>
+      <div class="save-btn">
+        <button class="btn" id="createCard">Save</button>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

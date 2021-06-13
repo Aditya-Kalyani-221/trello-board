@@ -1,0 +1,146 @@
+body {
+  font-family: sans-serif;
+  justify-content: center;
+  line-height: 1.5;
+}
+
+.float-right {
+	float: right;
+}
+
+.show-modal-list {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  margin: 1rem 2rem;
+  border: none;
+  background-color: #e7e7e7;
+  color: #444;
+  border-radius: 10rem;
+  cursor: pointer;
+  float: right;
+}
+
+.close-modal-list {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.close-modal-card {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+	display: none;
+}
+
+.modal-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52%;
+
+  background-color: white;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.modal-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52%;
+
+  background-color: white;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.list {
+	display: flex;
+}
+
+.list > div {
+	border: black solid 1px;
+	margin: 1rem;
+	width: 25%;
+	height: 100vh;
+}
+
+.list-item {
+	position: relative;
+}
+
+.btn {
+	font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    margin: 1rem 2rem;
+    border: none;
+    background-color: #e7e7e7;
+    color: #444;
+    border-radius: 10rem;
+    cursor: pointer;
+}
+
+.delete-list {
+	float: right;
+	font-weight: 600;
+	border: none;
+	cursor: pointer;
+	background: transparent;
+}
+
+.list-name {
+	margin-left: 40%;
+}
+
+.add-card-container {
+	position: absolute;
+	bottom: 0;
+	margin-left: 7em;
+}
+
+.add-card-btn {
+	font-size: 30px;
+	border: black solid 1px;
+	cursor: pointer;
+	background: transparent;
+	border-radius: 100px;
+}
+
+.card {
+	padding: 1em;
+	border: solid;
+	margin: 1em;
+}
